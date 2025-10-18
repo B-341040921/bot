@@ -3,6 +3,7 @@ import requests
 import json
 import discord
 import discord.ext
+import os
 from logging import exception
 from discord.ext import commands
 from discord import app_commands
