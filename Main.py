@@ -75,4 +75,4 @@ keywords=[os.environ.get(KEYWORDS)]
 auth=[os.environ.get(AUTH)]
 user_list=["budo_1","saket","jotan_0200","elenorsilly","zepz","1yme"]
 keep_alive()
-await client.run(os.environ.get("TOKEN"))
+client.run(os.environ.get("TOKEN"))
