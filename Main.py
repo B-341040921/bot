@@ -43,7 +43,7 @@ async def on_message(message):
         response = requests.post(
         url="https://openrouter.ai/api/v1/chat/completions",
         headers={
-          "Authorization": "Bearer "+os.environ.get("API"),
+          "Authorization": f"Bearer {os.environ.get("API")}",
           "Content-Type": "application/json",
          },
          data=json.dumps({
@@ -53,13 +53,12 @@ async def on_message(message):
              {
               "role": str(interaction.user),
               "content": text
-               }
+             }
           ],
 
         })
        )
         response_json = response.json()
-        channel = client.get_channel(message.channel.id)
         if "choices" in response_json and len(response_json["choices"]) > 0 and "message" in response_json["choices"][0] and "content" in response_json["choices"][0]["message"]:
           await ctx.response.send_message(response_json["choices"][0]["message"]["content"])
         else:
