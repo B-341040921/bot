@@ -8,7 +8,7 @@ def home():
   return "a"
 
 def run_web_server():
-  app.run(host='0.0.0.0', port=8080) # Render server IP, change Oct 27
+  app.run(host='0.0.0.0', port=8080)
 
 def keep_alive():
   t = Thread(target=run_web_server)
