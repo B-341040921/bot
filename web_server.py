@@ -8,8 +8,8 @@ app = Flask(__name__)
     return "a"
 
 def run_web_server():
-    app.run(host='0.0.0.0', port=8080)
+  app.run(host='0.0.0.0', port=8080)
 
 def keep_alive():
-    t = Thread(target=run_web_server)
-    t.start()
+  t = Thread(target=run_web_server)
+  t.start()
