@@ -67,7 +67,6 @@ async def on_message(message):
     else:
       await interaction.response.send_message("not authorized")
 
-keywords=[os.environ.get("KEYWORDS")]
 auth=["pvz_watermelus100","watermelon.11.","prime_minister_of_egg","sesruirnuien","lgcool2"]
 user_list=["budo_1","saket","jotan_0200","elenorsilly","zepz","1yme"]
 keep_alive()
