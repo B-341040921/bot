@@ -37,7 +37,7 @@ async def on_message(message):
     return
 
   if client.user.mentioned_in(message):
-    if str(interaction.user) in auth:
+    if str(message.author.name) in auth:
       try:
         response = requests.post(
         url="https://openrouter.ai/api/v1/chat/completions",
