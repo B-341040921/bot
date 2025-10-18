@@ -1,3 +1,4 @@
+from web_server import keep_alive
 nest_asyncio.apply()
 
 intents = discord.Intents.default()
@@ -73,4 +74,5 @@ async def on_message(message):
 keywords=[os.environ.get(KEYWORDS)]
 auth=[os.environ.get(AUTH)]
 user_list=["budo_1","saket","jotan_0200","elenorsilly","zepz","1yme"]
+keep_alive()
 await client.run(os.environ.get("TOKEN"))
