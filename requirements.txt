@@ -2,4 +2,3 @@ discord.py
 flask
 asyncio
 requests
-nest_asyncio
