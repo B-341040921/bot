@@ -4,7 +4,8 @@ import json
 import discord
 import discord.ext
 from logging import exception
-from discord.ext import commands, app_commands
+from discord.ext import commands
+from discord import app_commands
 from web_server import keep_alive
 
 intents = discord.Intents.default()
