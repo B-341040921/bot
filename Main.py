@@ -9,9 +9,9 @@ tree = app_commands.CommandTree(client)
 
 @client.event
 async def on_ready():
-	print(f'We have logged in as {client.user}')
-	await tree.sync()
-	await client.change_presence(status=discord.Status.online)
+  print(f'We have logged in as {client.user}')
+  await tree.sync()
+  await client.change_presence(status=discord.Status.online)
 
 @tree.command(name="check_user", description="checks if user is on the list")
 async def check_user(interaction: discord.Interaction, user: str):
