@@ -57,9 +57,9 @@ async def on_message(message):
 
         })
        )
-          response_json = response.json()
-          if "choices" in response_json and len(response_json["choices"]) > 0 and "message" in response_json["choices"][0] and "content" in response_json["choices"][0]["message"]:
-            await interaction.response.send_message(response_json["choices"][0]["message"]["content"])
+        response_json = response.json()
+        if "choices" in response_json and len(response_json["choices"]) > 0 and "message" in response_json["choices"][0] and "content" in response_json["choices"][0]["message"]:
+          await interaction.response.send_message(response_json["choices"][0]["message"]["content"])
         else:
           await interaction.response.send_message("Could not get a valid response from the API.")
       except:
