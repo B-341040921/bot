@@ -1,5 +1,4 @@
 from web_server import keep_alive
-nest_asyncio.apply()
 
 intents = discord.Intents.default()
 intents.message_content = True
