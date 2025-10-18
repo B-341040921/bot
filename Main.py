@@ -3,7 +3,7 @@ import requests
 import json
 import discord
 from logging import exception
-from discord.ext import commands
+from discord import commands
 from web_server import keep_alive
 
 intents = discord.Intents.default()
