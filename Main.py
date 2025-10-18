@@ -59,13 +59,13 @@ async def on_message(message):
        )
         response_json = response.json()
         if "choices" in response_json and len(response_json["choices"]) > 0 and "message" in response_json["choices"][0] and "content" in response_json["choices"][0]["message"]:
-          await channel.response.send_message(response_json["choices"][0]["message"]["content"])
+          await message.channel.response.send_message(response_json["choices"][0]["message"]["content"])
         else:
-          await channel.response.send_message("Could not get a valid response from the API.")
+          await message.channel.response.send_message("Could not get a valid response from the API.")
       except:
-        await channel.response.send_message("API on cooldown")
+        await message.channel.response.send_message("API on cooldown")
     else:
-      await channel.response.send_message("not authorized")
+      await message.channel.response.send_message("not authorized")
 
 auth=["pvz_watermelus100","watermelon.11.","prime_minister_of_egg","sesruirnuien","lgcool2"]
 user_list=["budo_1","saket","jotan_0200","elenorsilly","zepz","1yme"]
