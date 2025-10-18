@@ -1,0 +1,7 @@
+discord.py
+os
+flask
+asyncio
+requests
+json
+nest_asyncio
