@@ -22,7 +22,7 @@ async def on_ready():
   await client.change_presence(status=discord.Status.online)
 
 @tree.command(name="check_user", description="checks if user is on the list")
-async def check_user(interaction: discord.Interaction, user: str):
+async def check_user(interaction: discord.Interaction, user: str)
   if str(interaction.user) in auth:
     if user.lower() in user_list:
         await interaction.response.send_message(f"user {user} is in list")
@@ -33,6 +33,7 @@ async def check_user(interaction: discord.Interaction, user: str):
 
 @client.event
 async def on_message(message):
+  global channel
   if message.author == client.user:
     return
 
