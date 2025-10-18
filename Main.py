@@ -2,8 +2,9 @@ import asyncio
 import requests
 import json
 import discord
+import discord.ext
 from logging import exception
-from discord import commands
+from discord.ext import commands
 from web_server import keep_alive
 
 intents = discord.Intents.default()
