@@ -36,7 +36,7 @@ async def on_message(message):
   if message.author == client.user:
     return
 
-  if bot.user.mentioned_in(message):
+  if client.user.mentioned_in(message):
     if str(interaction.user) in auth:
       try:
         response = requests.post(
