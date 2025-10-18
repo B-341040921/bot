@@ -1,3 +1,11 @@
+import asyncio
+import requests
+import json
+import nest_asyncio
+from logging import exception
+from google.colab import userdata
+from discord import app_commands
+from discord.ext import commands
 from web_server import keep_alive
 
 intents = discord.Intents.default()
